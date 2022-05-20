@@ -1,0 +1,9 @@
+.stats {
+  border: 1px solid black;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  &__elem:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}

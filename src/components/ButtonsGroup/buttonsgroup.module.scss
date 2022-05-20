@@ -1,0 +1,21 @@
+.buttons {
+  margin: 10px;
+  &__input {
+    width: 200px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: inherit;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  &__btn {
+    width: 200px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: inherit;
+  }
+}
