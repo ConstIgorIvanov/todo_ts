@@ -1,5 +1,30 @@
 .elem {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  align-items: center;
+  border: 1px solid blue;
+  border-radius: 12px;
+  padding: 15px;
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  &:hover {
+    transition: 0.15s;
+    transform: scale(1.01);
+  }
+}
+
+.elem input {
+  width: 30px;
+  height: 30px;
+}
+
+.title {
+  width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.id {
+  font-weight: 700;
 }

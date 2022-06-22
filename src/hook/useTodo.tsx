@@ -1,11 +1,12 @@
-import React from "react";
-import { useQuery } from "@apollo/client";
-import { ITodo } from "../types/data";
-import { IMission } from "../types/data";
-import { GET_TODO } from "../query/getTodo";
+import React from 'react';
+import { useQuery } from '@apollo/client';
 
-const useTodo = () => {
-  const [qtodo, setTodo] = React.useState<ITodo[]>([]);
+import { ITodo, IMission } from '../types/data';
+
+import { GET_TODO } from '../query/getTodo';
+
+const useTodo = (): [ITodo[], React.Dispatch<React.SetStateAction<ITodo[]>>] => {
+  const [todo, setTodo] = React.useState<ITodo[]>([]);
   const { data, loading } = useQuery(GET_TODO, {
     variables: {
       limit: 5,
@@ -21,12 +22,12 @@ const useTodo = () => {
             title: obj.name,
             completed: false,
           };
-        })
+        }),
       );
     }
   }, [data]);
 
-  return [qtodo];
+  return [todo, setTodo];
 };
 
 export default useTodo;
